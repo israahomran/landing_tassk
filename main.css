@@ -1,0 +1,928 @@
+@import './base.css';
+
+body {
+    font-family: var(--mainFont);
+    background-color: #FFFFFF;
+    height: 2000px;
+}
+
+/* header */
+.header {
+    background-color: #FFFFFF;
+    padding: 20px;
+    box-shadow: 3px -5px 20px 0px #bbb9b9;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.list {
+    display: none;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.header .logo img {
+    width: 30px;
+}
+
+.header .logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    color: var(--mainColor);
+    font-weight: 200px;
+
+}
+
+.header .logo a {
+    color: var(--mainColor);
+    font-weight: bold;
+}
+
+.nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.nav ul li a {
+    color: black;
+}
+
+
+.auth {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+
+}
+
+.auth a,
+.buttons a {
+    font-family: var(--subFont);
+    padding: 6 30 px;
+    border-radius: 10px;
+    font-weight: bold;
+
+
+}
+
+.auth .login {
+    color: var(--mainColor);
+    border: 2px solid var(--mainColor);
+    padding: 5px 35px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+   
+
+}
+
+.auth .register,
+.home .register {
+    color: white;
+    background-color: var(--mainColor);
+    border: 2px solid var(--mainColor);
+    padding: 5px 35px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+}
+
+
+/* -----------------------------------
+/* section Home*/
+
+.home {
+    padding: 20px;
+}
+
+.home span {
+    color: var(--mainColor);
+    width: min-content;
+}
+
+.home-content {
+    width: calc((100% - 350px)/2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 3s ease forwards;
+
+}
+
+.home-content h1 {
+    font-size: 50px;
+
+}
+
+.home-content p {
+    color: #969696;
+
+}
+
+.home .row {
+    gap: 30px;
+
+}
+
+.home-img {
+    width: calc((100% - 40px)/2);
+    display: flex;
+    justify-content: center;
+
+}
+
+.home-img img {
+    width: 80%; 
+    border-radius: 50%;
+    object-fit: cover; 
+    aspect-ratio: 1 / 1; 
+    float: left; 
+    margin-right: 20px; 
+    align-items: center;
+
+}
+.feature-item .icon {
+    margin-bottom: 20px;
+   background-color: #fff;
+   width: 25px; 
+   height: 25px; 
+   border-radius: 50%; 
+  
+    
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.buttons .playVideo {
+    color: black;
+    border: 2px solid none;
+    padding: 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.play {
+    color: #F0C932;
+    font-size: large;
+
+}
+
+/* -----------------------------------
+/* section features*/
+.features-section {
+    padding: 20px;
+    background-color: #F5F5F5;
+}
+
+.features-section .row {
+    gap: 10px;
+}
+
+.features-header {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 3s ease forwards;
+
+}
+
+.features-header span {
+    color: var(--mainColor);
+    width:100px;
+
+}
+
+.features-header p {
+    color: #969696;
+}
+
+.features-content {
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+
+}
+
+.feature-item {
+    width: 170px;
+    height: 300px;
+    background-color: var(--mainColor);
+    padding: 20px;
+    border-radius: 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.feature-item h3 {
+    color: white;
+    font-size: 15px;
+    font-family: var(--subFont);
+}
+
+.feature-item p {
+    color: #DDDDDD;
+
+}
+
+.feature-item img {
+    border: 10px solid #FFFFFF;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+}
+
+.arrows {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 15px;
+    gap: 10px;
+
+}
+
+.left-arrow,
+.right-arrow {
+    border: 5px solid transparent;
+    background-color: #F0C932;
+    border-radius: 50%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+}
+
+
+/* --------------------------------
+/* section course-overview*/
+.course-overveiw {
+    padding: 40px;
+    background-color: var(--mainColor);
+
+}
+
+.course-overveiw-img {
+    width: calc((100% - 100px)/2);
+    display: flex;
+    justify-content: center;
+}
+
+.course-overveiw-img img {
+    border-radius: 50%; 
+    width: 300px; 
+    height: 300px; 
+    object-fit: cover;
+    background-color: #F0C932;
+}
+
+.course-overveiw-info {
+    width: calc((100% - 100px)/2);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+
+}
+
+.course-overveiw-info h2 {
+    color: #FFFFFF;
+}
+
+.course-overveiw-info p,
+.course-stats {
+    color: #DDDDDD;
+}
+
+.course-overveiw-info span:first-of-type {
+    color: #F0C932;
+    font-family: var(--subFont);
+}
+
+.course-overveiw .row {
+    align-items: center;
+    gap: 20px;
+}
+
+.course-stats {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: var(--subFont);
+    gap: 10px;
+}
+
+.course-stats span:first-of-type {
+    font-weight: 800;
+}
+
+/* --------------------------------
+/* section Courses*/
+
+
+.courses {
+    padding: 20px;
+    background-color: #FFFFFF;
+
+}
+
+.courses.row {
+    gap: 40px;
+
+}
+
+.course {
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: 20px;
+    width: calc((100% - 40px)/2);
+
+}
+
+.course-item {
+    padding: 10px;
+    width: calc((100% - 20px)/2);
+    box-shadow: 3px -5px 20px 0px #bbb9b9;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+.course-card {
+    position: relative;
+}
+
+.courses .course-info {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    color: #FFFFFF;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+
+}
+
+.course-info span:first-of-type {
+    background-color: var(--mainColor);
+    padding: 10px;
+
+}
+
+.course-info span:last-of-type {
+    align-self: flex-end;
+
+}
+
+.course-descrption {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: calc((100% - 40px)/2);
+    opacity: 0;
+    animation: fadeIn 3s ease forwards;
+
+}
+.course-descrption p{
+    font-family: Poppins;
+font-size: 17.41px;
+font-weight: 400;
+line-height: 11.12px;
+text-align: left;
+color:  rgba(150, 150, 150, 1);
+padding: 10px;
+line-height: 20.12px;
+}
+
+.user-data h4{
+    font-family: Poppins;
+font-size: 12.77px;
+font-weight: 400;
+line-height: 8.65px;
+text-align: left;
+color:  rgba(150, 150, 150, 1);
+
+}
+.course-item img {
+    width: 100%;
+    filter: brightness(80%);
+}
+
+.course-detailes .row:last-of-type {
+    gap: 10px;
+    color: #BBB9B8;
+    justify-content: flex-start;
+
+}
+
+
+.course-descrption span {
+    color: var(--mainColor);
+
+
+}
+
+.course-descrption .see-all {
+    text-align: center;
+    width: 150px;
+    color: white;
+    background-color: var(--mainColor);
+    border: 2px solid var(--mainColor);
+    padding: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+
+.courses a {
+    font-family: var(--subFont);
+    padding: 6px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+
+
+}
+
+/* --------------------------------
+/* section testmonials*/
+.testmonials {
+    padding: 20px;
+
+
+}
+
+.testmonials .row {
+    gap: 40px;
+
+}
+.testmonial p{
+    font-family: Poppins;
+font-size: 10.41px;
+font-weight: 400;
+line-height: 12.36px;
+text-align: left;
+color:  rgba(100, 100, 100, 1);
+
+}
+
+.testmonials h2 {
+    text-align: center;
+    padding: 10px;
+    font-family:"Mada", sans-serif;;
+    font-weight: 800;
+}
+
+.testmonial {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0px 8.23px 8.23px rgb(218, 216, 216);
+    padding: 20px;
+    box-sizing: border-box;
+    width: calc((100% - 40px)/2);
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 3s ease forwards;
+}
+
+.user-info img {
+    width: 10%; 
+    border-radius: 50%;
+    object-fit: cover; 
+    aspect-ratio: 1 / 1; 
+    float: left; 
+    margin-right: 20px; 
+}
+
+.user-info {
+    display: flex;
+    gap: 10px;
+}
+
+.testmonial ::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-right: 20px solid #F4F4F4;
+    border-top: 20px solid #F4F4F4;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+
+}
+
+/* --------------------------------
+
+/* footer */
+.footer {
+    background-color: #393E46;
+    color: white;
+    padding: 20px;
+    font-weight: 300px;
+
+
+}
+
+.footer a {
+    color: white;
+
+}
+
+.footer .logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    color: var(--mainColor);
+    font-weight: 200px;
+
+}
+
+.footer .logo img {
+    width: 30px;
+}
+
+.footer .row {
+    gap: 20px;
+
+}
+
+.footer .icons img {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    padding: 10px;
+
+}
+
+.footer-start {
+    width: calc((100% - 30px) / 2);
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.footer-end {
+    width: calc((100% - 30px) / 2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.footer-end nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+
+}
+
+.footer-end .footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.highlight {
+
+    font-weight: bold;
+}
+
+/* --------------------------------
+
+/*  start to responsve header */
+@media screen and (max-width: 324px) {
+
+    .nav,
+    .auth {
+        display: none;
+
+    }
+
+    .list {
+        display: block;
+        order: 2;
+    }
+
+    .container {
+        width: calc(100% - 40px);
+    }
+
+    .header .logo img {
+        width: 20px;
+    }
+
+    .header .logo a {
+        color: var(--mainColor);
+        font-weight: normal;
+    }
+
+
+
+
+}
+
+@media screen and (min-width:325px) and (max-width: 403px) {
+
+    .nav,
+    .auth {
+        display: none;
+
+    }
+
+    .list {
+        display: block;
+        order: 2;
+    }
+
+    .container {
+
+        width: calc(100% - 60px);
+    }
+
+    .header .logo img {
+        width: 25px;
+    }
+
+    .header .logo a {
+        color: var(--mainColor);
+        font-weight: normal;
+    }
+
+}
+
+@media screen and (min-width:404px) and (max-width: 920px) {
+
+    .nav,
+    .auth {
+        display: none;
+
+    }
+
+    .list {
+        display: block;
+        order: 2;
+    }
+
+}
+
+
+
+/* --------------------------------
+
+/*  start to responsve homepage */
+
+@media (max-width: 800px) {
+    .home-content {
+        width: 100%;
+        flex-direction: column;
+
+    }
+
+    .home-img {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .home-img img {
+        width: 60%;
+
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .home-content h1 {
+        font-size: 30px;
+
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1056px) {
+    .home-content {
+        width: 70%;
+        flex-direction: column;
+
+    }
+
+    .home-img {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .home-img img {
+        width: 50%;
+
+    }
+
+    .container {
+        width: calc(100% - 100px);
+    }
+
+}
+
+/* --------------------------------
+
+/*  start to responsve feauters section */
+@media (max-width: 1295px) {
+    .features-header {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .features-content {
+        width: 100%;
+
+    }
+
+
+
+}
+
+@media  (max-width: 1002px) {
+    .features-section .row {
+        justify-content: center;
+    }
+
+    .features-content {
+        width:70%;
+        gap: 20px;
+        
+
+    }
+}
+
+@media (max-width: 800px) {
+    .features-content {
+        width: 100%;
+        gap: 20px;
+
+    }
+}
+
+/* --------------------------------
+
+/*  start to responsve feauters section */
+@media (max-width: 850px) {
+
+    .course-overveiw-img,
+    .course-overveiw-info {
+        text-align: center;
+        width: 100%;
+
+    }
+
+}
+
+@media (max-width: 450px) {
+    .course-stats {
+        width: 100%;
+        text-align: center;
+
+    }
+
+}
+
+/*------------------------------------
+
+/*  start to responsve course */
+@media (max-width: 900px) {
+    .course  {
+        width: 100%;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .course-item {
+        width: calc((100% - 20px)/2);
+        
+        margin-bottom: 20px;
+    }
+
+    .course-descrption {
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 650px) {
+    .course {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-item {
+        width: calc(100% - 20px);
+        margin-bottom: 20px;
+    }
+
+    .course-descrption {
+        width: 100%;
+    }
+    
+}
+
+/* --------------------------------
+
+/*  start to responsve testmonial */
+@media (max-width: 570px) {
+    .testmonial {
+        width: 100%;
+        flex-direction: column;
+
+    }
+}
+/* --------------------------------
+
+/*  start to responsve footer */
+@media screen and (max-width:768px) {
+    .footer-start {
+        width: 100%;
+
+    }
+
+    .footer-end {
+        width: 100%;
+        gap: 30px;
+    }
+
+    .footer-end .footer-item {
+        width: 40%;
+    }
+
+}
+
+
+@media screen and (max-width:576px) {
+    .footer-end {
+        gap: 10px;
+    }
+
+    .footer-start p {
+        display: none;
+    }
+
+    .footer-end .footer-item {
+        width: calc((100% - 10px) / 3);
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .footer-end .footer-item {
+        width: 100%;
+
+    }
+}
+
+/* ------------------------------------------------------
+/* hover */
+.auth .register:hover,
+.home .register:hover ,.auth .login:hover, .feature-item:hover, .see-all:hover, .course-item:hover, .buttons .playVideo:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.left-arrow:hover,
+.right-arrow:hover {
+    transform: scale(1.5);
+    box-shadow: 0 8px 16px rgba(15, 13, 13, 0.2);
+}
+/*Animation course*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
